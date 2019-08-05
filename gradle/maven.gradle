@@ -149,8 +149,15 @@ def generatePom() {
             }
             repositories {
                 repository {
+                    id "aliyun"
+                    url "https://maven.aliyun.com/repository/public"
+                    releases {
+                        enabled true
+                    }
+                }
+                repository {
                     id "jcenter"
-                    url "https://jcenter.bintray.com"
+                    url "https://maven.aliyun.com/repository/jcenter"
                     releases {
                         enabled true
                     }

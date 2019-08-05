@@ -32,9 +32,9 @@ apply plugin: "com.github.kt3k.coveralls"
 buildscript {
     repositories {
         mavenLocal()
-        jcenter()
-        maven { url "https://maven.eveoh.nl/content/repositories/releases" }
-        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        // maven { url "https://maven.eveoh.nl/content/repositories/releases" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
         maven { url "https://repo.spring.io/plugins-release" }
     }
 
@@ -93,8 +93,11 @@ allprojects {
 
     repositories {
         mavenLocal()
-        mavenCentral()
-        jcenter()
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url "https://build.shibboleth.net/nexus/content/repositories/releases" }
+        maven { url "https://dl.bintray.com/uniconiam/maven/" }
+        maven { url "http://repo2.maven.org/maven2/" }
     }
 }
 
@@ -121,13 +124,9 @@ subprojects {
 
     repositories {
         mavenLocal()
-        mavenCentral()
-        maven { url "https://build.shibboleth.net/nexus/content/repositories/releases" }
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-        maven { url "https://oss.sonatype.org/content/repositories/releases" }
-        maven { url "https://dl.bintray.com/uniconiam/maven" }
+        maven { url "https://maven.aliyun.com/repository/public" }
         maven { url "https://jitpack.io" }
-        jcenter()
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
     }
 
     test {
